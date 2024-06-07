@@ -11,6 +11,12 @@ if [ $# -eq 0 ]; then
 fi
 
 SERVICE="$1"
+
+if [[ "$(systemctl status $SERVICE 2>&1)" == *"Unit $SERVICE.service could not be found."* ]]; then
+	echo "${RED}Error${NC}: ${SERVICE} does not exist"
+	exit 1
+fi
+
 STATUS=$(systemctl is-active $SERVICE)
 
 check_status() {
