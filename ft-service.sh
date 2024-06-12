@@ -82,7 +82,7 @@ elif [ "$2" == "-r" ]; then
 	reload_service
 else
 	check_status
-	if [[ $RESPONSE =$HOME ^[Yy]$ ]]; then
+	if [[ $RESPONSE =~ ^[Yy]$ ]]; then
 		if [ $STATUS = "active" ]; then
 			stop_service
 		else
