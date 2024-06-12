@@ -5,11 +5,11 @@ Script to manage the status of services with `systemctl`
 #### Installation
 1. Clone in root:
 	```sh
-	git clone https://github.com/eesuhn/ft-service-ctl.git ~/.ft-service-ctl
+	git clone https://github.com/eesuhn/ft-service-ctl.git $HOME/.ft-service-ctl
 	```
 2. Run set-up script:
 	```sh
-	source ~/.ft-service-ctl/set-up.sh
+	source $HOME/.ft-service-ctl/set-up.sh
 	```
 
 #### Usage
